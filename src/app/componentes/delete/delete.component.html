@@ -1,0 +1,24 @@
+
+<br>
+<table>
+<thead>
+  <tr>
+    <th >Nombre</th>
+    <th >Correo</th>
+    <th >Direccion</th>
+    <th >Telefono</th>
+    <th></th>
+  </tr>
+</thead>
+<tbody *ngFor="let perfil of perfiles" >
+  <tr>
+    <td>{{perfil.nombre}}</td>
+    <td>{{perfil.correo}}</td>
+    <td>{{perfil.direccion}}</td>
+    <td>{{perfil.telefono}}</td>
+    <td> <img src='{{perfil.imagen}}'></td>
+    <td><button class="btn btn-danger" (click)="eliminar(perfil.id)">Eliminar</button></td>
+
+  </tr>
+</tbody>
+</table>
